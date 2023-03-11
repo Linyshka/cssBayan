@@ -120,7 +120,7 @@ body {
     }
 
     .accordeon:hover .plus_icon {
-        background: url("/cssBayan/assets/plus.png") center/cover no-repeat;
+        background: url("../assets/plus.png") center/cover no-repeat;
         opacity: 1;
         width: 0.8em;
         height: 0.8em;
@@ -157,7 +157,7 @@ body {
     }
 
     .plus_icon {
-        background: url("/cssBayan/assets/plus.png") center/cover no-repeat;
+        background: url("../assets/plus.png") center/cover no-repeat;
         opacity: 1;
         width: 0.8em;
         height: 0.8em;
