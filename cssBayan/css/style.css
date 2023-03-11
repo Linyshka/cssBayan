@@ -56,6 +56,7 @@ body{
 
 .text{
     max-width: 80%;
+    transition: all 2s;
 }
 
 .accordeon_input{
@@ -63,29 +64,53 @@ body{
     position: absolute;
 }
 
-.accordeon_input:checked~ .accordeon_mem{
-    display: block;
-}
-
-.accordeon_input:checked~ .accordeon_title .plus_icon{
-    transform: rotate(90deg);
+.accordeon_input:checked~ .accordeon_title .plus_icon,
+.accordeon_item:hover .plus_icon{
+    transform: rotate(45deg);
 }
 
 .accordeon_mem{
-    display: none;
-    margin-top: 1.5vh;
-    width: 100%;
-    text-align: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .mem_img{
+    transition: all 2s;
+    opacity: 0;
+    width: 0%;
+    height: 0%;
+}
+
+.accordeon_input:checked~label .mem_img,
+.accordeon_item:hover .mem_img{
+    opacity: 1;
     width: 40%;
     height: 40%;
+    padding: 0.5em 0;
 }
 
 .plus_icon{
-    background-image: url("/cssBayan/assets/plus.png");
-    width: 1rem;
-    height: 1rem;
+    opacity: 0;
+    transition: all 1s;
 }
 
+.accordeon_mem,
+.accordeon_title,
+.accordeon,
+.mem_img,
+.accordeon_mem{
+    cursor: pointer;
+}
+
+.accordeon:hover .plus_icon{
+    background: url("/cssBayan/assets/plus.png") center/cover no-repeat;
+    opacity: 1;
+    width: 0.8em;
+    height: 0.8em;
+}
+
+.accordeon_input:checked~label .text,
+.accordeon_item:hover .text{
+    color:rgb(242, 158, 48);
+}
